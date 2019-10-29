@@ -2,7 +2,7 @@
 
 namespace CreateClass
 {
-    class Person
+    public class Person
     {
         protected string Name { get; }
         protected DateTime BirthDate { get; }
@@ -20,18 +20,9 @@ namespace CreateClass
             return "Name: " + Name + " | " +"Gender: " + Gender + " | " + "Birth Date: "+ BirthDate.ToShortDateString();
         }
 
-        static void Main(string[] args)
-        {
-            var barna = new Person("Barna", new DateTime(1996,1,2),Gender.Male );
-            var diana = new Person("Diana", DateTime.Now, Gender.Female);
-            Console.WriteLine(barna.ToString());
-            Console.WriteLine(diana.ToString());
-            Console.ReadLine();
-        }
-
-
     }
-    internal enum Gender
+
+    public enum Gender
     {
         Male,
         Female,
