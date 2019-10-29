@@ -22,7 +22,9 @@ namespace CloneWars
 
         public object Clone()
         {
-            return this.MemberwiseClone();
+            Employee newEmployee = (Employee) this.MemberwiseClone();
+            newEmployee.Room = new Room(Room.RoomNumber);
+            return newEmployee;
         }
     }
 
